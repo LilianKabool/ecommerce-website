@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-[#f5f5f5] text-[#333] leading-6;
+  }
+  @layer components {
+  .btn {
+    @apply w-fit px-6 py-3 rounded text-base font-medium cursor-pointer
+           transition-all duration-200 inline-block text-center
+           hover:-translate-y-[1px] active:translate-y-0;
+  }
+}
+
+}
