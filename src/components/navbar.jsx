@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto px-4 md:px-8  flex flex-wrap items-center justify-between">
         <Link
           to="/home"
-          className="text-lg md:text-xl font-bold text-[#cd936c] no-underline hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
+          className="text-lg md:text-xl font-bold text-[var(--primary)] no-underline hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
         >
           ShopHup
         </Link>
@@ -16,27 +16,27 @@ export default function Navbar() {
           {!user ? (
             <div className="flex justify-center items-center gap-4">
               <Link
-                to="/auth?mode=login"
-                className="text-sm md:text-base text-[#cd936c] font-bold hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
+                to="/login"
+                className="text-sm md:text-base text-[var(--primary)] font-bold hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
               >
                 Login
               </Link>
 
               <Link
-                to="/auth?mode=signup"
-                className="text-sm md:text-base text-[#cd936c] font-bold hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
+                to="/signup"
+                className="text-sm md:text-base text-[var(--primary)] font-bold hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
               >
                 Signup
               </Link>
             </div>
           ) : (
             <div className="flex items-center gap-4">
-              <span className="hidden sm:block text-[0.9rem] text-[#cd936c] max-w-[120px] truncate">
+              <span className="hidden sm:block text-[0.9rem] text-[var(--primary)] max-w-[120px] truncate">
                 hello, {user.email}
               </span>
 
               <button
-                className=" text-[#cd936c] font-bold hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
+                className=" text-[var(--primary)] font-bold hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
                 onClick={logOut}
               >
                 Logout
@@ -46,7 +46,7 @@ export default function Navbar() {
 
           <Link
             to="/checkout"
-            className="text-xl md:text-2xl text-[#cd936c] hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
+            className="text-xl md:text-2xl text-[var(--primary)] hover:scale-110 hover:text-yellow-800 transition-all duration-300 ease-in-out"
           >
             <BiCart />
           </Link>

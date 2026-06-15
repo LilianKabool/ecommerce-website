@@ -29,14 +29,14 @@ const { user } = UseAuth();
           {product.name}
         </h3>
 
-        <p className="text-2xl font-bold text-[#cd936c] mb-5">
+        <p className="text-2xl font-bold text-[var(--primary)] mb-5">
           ${product.price}
         </p>
 
         <div className="flex gap-3">
           <Link
             to={`/products/${product.id}`}
-            className="flex-1 text-center py-2 rounded-full border border-[#cd936c] text-[#cd936c] hover:bg-[#cd936c] hover:text-white transition-all duration-300"
+            className="flex-1 text-center py-2 rounded-full border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all duration-300"
           >
             Details
           </Link>
@@ -50,7 +50,7 @@ const { user } = UseAuth();
   }}
             
         }
-            className="flex-1 py-2 rounded-full bg-[#cd936c] text-white hover:bg-[#b67d57] transition-all duration-300"
+            className="flex-1 py-2 rounded-full bg-[var(--primary)] text-white hover:bg-[#b67d57] transition-all duration-300"
           >
             Add {productQuantityLable}
           </button>

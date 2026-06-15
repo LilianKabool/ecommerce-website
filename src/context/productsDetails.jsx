@@ -34,25 +34,25 @@ export default function ProductsDetails() {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#FAF7F2]">
-        <p className="text-[#cd936c] text-xl">Loading...</p>
+      <div className="min-h-screen flex items-center justify-center bg-[var(--background)]">
+        <p className="text-[var(--primary)] text-xl">Loading...</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#FAF7F2] px-6 py-10">
+    <div className="min-h-screen flex items-center justify-center bg-[var(--background)] px-6 py-10">
       <div className="max-w-5xl w-full">
         
         
         <button
           onClick={() => navigate("/home")}
-          className="mb-6 text-[#cd936c] font-medium hover:text-[#b88461] transition"
+          className="mb-6 text-[var(--primary)] font-medium hover:text-[var(--primary-dark)] transition"
         >
           ← Back to Home
         </button>
 
-        <div className="grid md:grid-cols-2 gap-12 bg-[#FCF6F2] p-12 rounded-[35px] shadow-2xl">
+        <div className="grid md:grid-cols-2 gap-12  p-12 rounded-[35px] shadow-2xl">
 
   
           <div className="flex justify-center items-center">
@@ -65,16 +65,16 @@ export default function ProductsDetails() {
 
           <div className="flex flex-col justify-center">
             
-            <p className="uppercase tracking-[4px] text-[#cd936c] text-sm mb-2">
+            <p className="uppercase tracking-[4px] text-[var(--primary)] text-sm mb-2">
               Lilyra Collection
             </p>
 
-            <h1 className="text-4xl font-bold text-[#cd936c] mb-3">
+            <h1 className="text-4xl font-bold text-[var(--primary)] mb-3">
               {product.name}
             </h1>
 
            
-            <p className="text-3xl font-bold text-[#b8865b] mb-4">
+            <p className="text-3xl font-bold text-[var(--primary)] mb-4">
               ${product.price}
             </p>
 
@@ -93,7 +93,7 @@ export default function ProductsDetails() {
 
             {/* Add to Cart */}
             <button
-              className="bg-[#cd936c] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#b88461] hover:scale-105 transition duration-300 w-fit flex items-center gap-2"
+              className="bg-[var(--primary)] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] hover:scale-105 transition duration-300 w-fit flex items-center gap-2"
              onClick={() => {
   if (!user) {
     navigate("/auth");

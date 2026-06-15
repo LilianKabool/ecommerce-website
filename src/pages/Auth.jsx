@@ -32,13 +32,13 @@ const [mode, setMode] = useState(initialMode);
   }
 
  return (
-  <div className="min-h-screen flex items-center justify-center bg-[#FAF7F2] px-4">
+  <div className="min-h-screen flex items-center justify-center bg-[var(--background)] px-4">
     
-    <div className="w-full max-w-md bg-[#FFF9F5] p-10 rounded-[30px] shadow-2xl border border-[#f1e2d6]">
+    <div className="w-full max-w-md bg-[var(--card)] p-10 rounded-[30px] shadow-2xl border border-[#f1e2d6]">
 
   
-      <h1 className="text-3xl font-bold text-center text-[#cd936c] mb-8 tracking-wide">
-        {mode === "signup" ? "Join Lilyra ✨" : "Welcome Back 🌸"}
+      <h1 className="text-3xl font-bold text-center text-[var(--primary)] mb-8 tracking-wide">
+        {mode === "signup" ? "Join Lilyra " : "Welcome Back "}
       </h1>
 
       {error && (
@@ -50,7 +50,7 @@ const [mode, setMode] = useState(initialMode);
       <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
 
         <div>
-          <label className="block mb-2 text-sm font-medium text-[#7a5c45]">
+          <label className="block mb-2 text-sm font-medium text-[var(--text-main)]">
             Email
           </label>
 
@@ -58,7 +58,7 @@ const [mode, setMode] = useState(initialMode);
             className={`w-full p-3 rounded-xl border transition focus:outline-none ${
               errors.email
                 ? "border-red-400"
-                : "border-[#e7d6c8] focus:border-[#cd936c]"
+                : "border-[#e7d6c8] focus:border-[var(--primary)]"
             } bg-white`}
             type="email"
             id="email"
@@ -74,7 +74,7 @@ const [mode, setMode] = useState(initialMode);
 
        
         <div>
-          <label className="block mb-2 text-sm font-medium text-[#7a5c45]">
+          <label className="block mb-2 text-sm font-medium text-[var(--text-main)]">
             Password
           </label>
 
@@ -82,7 +82,7 @@ const [mode, setMode] = useState(initialMode);
             className={`w-full p-3 rounded-xl border transition focus:outline-none ${
               errors.password
                 ? "border-red-400"
-                : "border-[#e7d6c8] focus:border-[#cd936c]"
+                : "border-[#e7d6c8] focus:border-[var(--primary)]"
             } bg-white`}
             type="password"
             id="password"
@@ -103,20 +103,20 @@ const [mode, setMode] = useState(initialMode);
     
         <button
           type="submit"
-          className="w-full bg-[#cd936c] text-white py-3 rounded-full shadow-md hover:bg-[#b88461] hover:scale-[1.02] transition"
+          className="w-full bg-[var(--primary)] text-white py-3 rounded-full shadow-md hover:bg-[var(--primary-dark)] hover:scale-[1.02] transition"
         >
           {mode === "signup" ? "Create Account" : "Login"}
         </button>
       </form>
 
     
-      <div className="mt-6 text-center text-sm text-[#7a5c45]">
+      <div className="mt-6 text-center text-sm text-[var(--text-main)]">
         {mode === "signup" ? (
           <p>
             Already have an account?{" "}
             <button
               type="button"
-              className="text-[#cd936c] font-medium hover:underline"
+              className="text-[var(--primary)] font-medium hover:underline"
               onClick={() => setMode("login")}
             >
               Login
@@ -127,7 +127,7 @@ const [mode, setMode] = useState(initialMode);
             Don't have an account?{" "}
             <button
               type="button"
-              className="text-[#cd936c] font-medium hover:underline"
+              className="text-[var(--primary)] font-medium hover:underline"
               onClick={() => setMode("signup")}
             >
               Sign Up

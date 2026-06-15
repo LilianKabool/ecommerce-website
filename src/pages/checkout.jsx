@@ -15,10 +15,10 @@ const navigate = useNavigate();
   );
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] py-10 px-4">
+    <div className="min-h-screen bg-[var(--background)] py-10 px-4">
   <button
           onClick={() => navigate("/home")}
-          className="mb-6 text-[#cd936c] font-medium hover:text-[#b88461] transition"
+          className="mb-6 text-[var(--primary)] font-medium hover:text-[var(--primary-dark)] transition"
         >
           ← Back to Home
         </button>
@@ -26,18 +26,18 @@ const navigate = useNavigate();
       <div className="max-w-5xl mx-auto">
 
         {/* Title */}
-        <h1 className="text-4xl font-bold text-[#cd936c] text-center mb-10">
-          Your Shopping Bag ✨
+        <h1 className="text-4xl font-bold text-[var(--primary)] text-center mb-10">
+          Your Shopping Bag 
         </h1>
 
-        <div className="bg-[#FFF9F5] p-8 md:p-10 rounded-[35px] shadow-2xl">
+        <div className="bg-[var(--card)] p-8 md:p-10 rounded-[35px] shadow-2xl">
 
           {/* Empty Cart */}
           {CartItems.length === 0 ? (
             <div className="text-center py-16">
 
-              <h2 className="text-3xl text-[#cd936c] mb-4">
-                Your bag is empty 🌸
+              <h2 className="text-3xl text-[var(--primary)] mb-4">
+                Your bag is empty 
               </h2>
 
               <p className="text-gray-500">
@@ -47,7 +47,7 @@ const navigate = useNavigate();
             </div>
           ) : (
             <>
-              <h2 className="text-2xl font-semibold text-[#7a5c45] mb-8">
+              <h2 className="text-2xl font-semibold text-[var(--text-main)] mb-8">
                 Order Summary
               </h2>
 
@@ -65,11 +65,11 @@ const navigate = useNavigate();
 
                   {/* Product Info */}
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-[#7a5c45] mb-2">
+                    <h3 className="text-xl font-semibold text-[var(--text-main)] mb-2">
                       {item.product.name}
                     </h3>
 
-                    <p className="text-[#cd936c] font-bold text-lg">
+                    <p className="text-[var(--primary)] font-bold text-lg">
                       ${item.product.price}
                     </p>
                   </div>
@@ -80,7 +80,7 @@ const navigate = useNavigate();
                     <div className="flex items-center gap-3">
 
                       <button
-                        className="w-9 h-9 rounded-full bg-[#f7eee7] text-[#cd936c] font-bold hover:bg-[#e7d6c8] transition"
+                        className="w-9 h-9 rounded-full bg-[#f7eee7] text-[var(--primary)] font-bold hover:bg-[#e7d6c8] transition"
                         onClick={() =>
                           updateQuantity(item.id, item.quantity - 1)
                         }
@@ -88,12 +88,12 @@ const navigate = useNavigate();
                         -
                       </button>
 
-                      <span className="min-w-[30px] text-center font-semibold text-[#7a5c45]">
+                      <span className="min-w-[30px] text-center font-semibold text-[var(--text-main)]">
                         {item.quantity}
                       </span>
 
                       <button
-                        className="w-9 h-9 rounded-full bg-[#f7eee7] text-[#cd936c] font-bold hover:bg-[#e7d6c8] transition"
+                        className="w-9 h-9 rounded-full bg-[#f7eee7] text-[var(--primary)] font-bold hover:bg-[#e7d6c8] transition"
                         onClick={() =>
                           updateQuantity(item.id, item.quantity + 1)
                         }
@@ -103,7 +103,7 @@ const navigate = useNavigate();
 
                     </div>
 
-                    <p className="font-bold text-[#cd936c] text-xl">
+                    <p className="font-bold text-[var(--primary)] text-xl">
                       $
                       {(
                         item.product.price * item.quantity
@@ -126,11 +126,11 @@ const navigate = useNavigate();
 
                 <div className="flex justify-between items-center mb-6">
 
-                  <h2 className="text-2xl font-bold text-[#7a5c45]">
+                  <h2 className="text-2xl font-bold text-[var(--text-main)]">
                     Total
                   </h2>
 
-                  <span className="text-3xl font-bold text-[#cd936c]">
+                  <span className="text-3xl font-bold text-[var(--primary)]">
                     ${total.toFixed(2)}
                   </span>
 

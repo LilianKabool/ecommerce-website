@@ -11,19 +11,19 @@ export default function AuthProvider({ children }) {
       : null,
   );
 
-  function signUp(email, password) {
+  function signUp( fullName , email, password ) {
     const users = JSON.parse(localStorage.getItem("users") || "[]");
 
     if (users.find((u) => u.email === email)) {
       return { success: false, error: "User already exists" };
     }
-    const newUser = { email, password };
+    const newUser = { fullName, email, password };
 
     users.push(newUser);
 
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("currentUserEmail", email);
-    setUser({ email });
+    setUser({ email , fullName });
 
     return { success: true };
   }
