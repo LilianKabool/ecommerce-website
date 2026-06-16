@@ -35,6 +35,7 @@ export default function Signup() {
   }
 
   return (
+    
     <div className="min-h-screen flex items-center justify-center bg-[var(--background)] px-4">
 
       <div className="w-full max-w-md bg-[var(--card)] p-10 rounded-[30px] shadow-2xl border border-[#f1e2d6]">

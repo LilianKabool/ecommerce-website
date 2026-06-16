@@ -96,7 +96,7 @@ export default function ProductsDetails() {
               className="bg-[var(--primary)] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[var(--primary-dark)] hover:scale-105 transition duration-300 w-fit flex items-center gap-2"
              onClick={() => {
   if (!user) {
-    navigate("/auth");
+    navigate("/Login");
     return;
   } else {
     addToCard(product.id);

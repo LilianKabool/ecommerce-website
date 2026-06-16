@@ -43,7 +43,7 @@ const { user } = UseAuth();
 
           <button
             onClick={()=>{ if (!user) {
-    navigate("/auth");
+    navigate("/Login");
     return;
   } else {
     addToCard(product.id);
