@@ -1,10 +1,10 @@
 import { Routes , Route } from "react-router-dom";
 import Home from "../pages/Home";
-import Checkout from "../pages/Checkout";
-import ProductsDetails from "../context/ProductsDetails";
+import Checkout from "../pages/checkout";
+import ProductsDetails from "../context/productsDetails";
 import Landing from "../pages/Landing";
 import Login from "../pages/Login";
-import Signup from "../pages/Signup";
+import Signup from "../pages/SignUp";
 function AppRoutes(){
    return(
     

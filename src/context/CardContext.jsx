@@ -1,5 +1,5 @@
 import { createContext, useContext, useState ,useEffect  } from "react";
-import { getProductById } from "../data/products";
+import { getProductById } from "../data/Products";
 
 
 const CardContext = createContext();
